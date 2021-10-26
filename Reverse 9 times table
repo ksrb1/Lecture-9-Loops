@@ -1,0 +1,11 @@
+
+
+  int num{ 108 };
+
+    while (true) {
+        cout << num << endl;
+        if (num == 9) {
+            break;
+        }
+        num -= 9;                
+    }
