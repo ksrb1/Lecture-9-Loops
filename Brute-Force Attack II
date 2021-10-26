@@ -1,0 +1,37 @@
+    
+    
+    
+    
+    int pin{246};
+    int userInput{};
+    int attempts{ 5 };
+
+    cout << "Enter pin to access the safe" << endl;
+    cin >> userInput;
+
+    if (userInput == pin) {
+       cout << "Nice you have hacked into the safe!" << endl;
+    }
+    else {
+        while (userInput != pin) {
+
+            cin.clear();
+            cin.ignore(1000, '\n');
+
+            cout << "Incorrect pin, enter correct pin: ";
+            cin >> userInput;
+
+            if (userInput == pin) {
+                cout << "Nice you have hacked into the safe!" << endl;
+                break;
+            }
+
+            attempts--;
+            
+            if (attempts == 0) {
+                cout << "Attemps limit reached,The autorities have been alerted" << endl;
+                break;
+            }  
+            cout << attempts << " Attempts left" << endl;
+        }
+    }
